@@ -11,9 +11,9 @@ locale                   : "en-US"
 title                    : Your Name
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : Your Name
+name                     : Your Nam
 description              : Your Name - Projects and CV 
-baseurl                  : "/sp26-portfolio-ericlee4992/"
+baseurl                  : "sp26-portfolio-ericlee4992"
 
 # Theme and Style
 theme: jekyll-theme-minimal
