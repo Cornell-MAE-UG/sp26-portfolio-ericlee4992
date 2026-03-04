@@ -11,7 +11,7 @@ The objective of this project is to design a simple lever-based nutcracker capab
 
 The goal is to determine a feasible geometry for a nutcracker such that a human user can apply a reasonable hand force while generating the required compressive force on the nut. Additionally, the design will be modified to consider the use of a linear actuator instead of hand grip strength as the input force.
 
-2. Constraints and Input Parameters (Given)
+2. Constraints and Input Parameters
 
 Several inputs and constraints are required for the design.
 
