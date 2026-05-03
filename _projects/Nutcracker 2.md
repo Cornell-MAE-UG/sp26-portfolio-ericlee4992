@@ -2,7 +2,6 @@
 layout: project
 title: Nutcracker 2
 description: Nutcracker Design 2
-image: /assets/images/Nutcracker-diagram.jpeg
 ---
 ## Problem Update
 
@@ -125,5 +124,7 @@ Since:
 - Allowable deflection: 2.4 mm  
 
 This design is mass-efficient because increasing the height of the beam significantly improves stiffness (proportional to h³), allowing a small cross-section to meet the deflection requirement.
+
+<img src="/assets/images/New-nutcracker.png" width="700">
 
 ---
