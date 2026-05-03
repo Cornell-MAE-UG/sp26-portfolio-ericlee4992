@@ -8,11 +8,11 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : Your Name
+title                    : Eric Lee
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : Your Nam
-description              : Your Name - Projects and CV 
+name                     : Eric Lee
+description              : Eric Lee - Projects and CV 
 baseurl                  : "/sp26-portfolio-ericlee4992"
 
 # Theme and Style
