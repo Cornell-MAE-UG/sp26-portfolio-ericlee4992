@@ -125,6 +125,6 @@ Since:
 
 This design is mass-efficient because increasing the height of the beam significantly improves stiffness (proportional to h³), allowing a small cross-section to meet the deflection requirement.
 
-<img src="/workspaces/sp26-portfolio-ericlee4992/assets/images/New-nutcracker.png">
+<img src="/assets/images/New-nutcracker.png" alt="Nutcracker beam design diagram">
 
 ---
