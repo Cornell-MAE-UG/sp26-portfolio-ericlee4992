@@ -5,7 +5,6 @@ title: <Eric Lee>
 
 ## About Me
 
-
 ![Profile Picture]({{ "assets/images/profile-pic.jpg" | relative_url }}){: class="profile-image"}
 
  
