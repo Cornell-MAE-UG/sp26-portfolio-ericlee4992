@@ -4,172 +4,126 @@ title: Nutcracker 2
 description: Nutcracker Design 2
 image: /assets/images/Nutcracker-diagram.jpeg
 ---
-### a. Location of Maximum Elastic Deflection
+## Problem Update
 
-For this update, I modeled one nutcracker handle as a cantilever beam. The handle is assumed to be fixed near the pivot/jaw region and loaded by the actuator force at the far end of the handle. Only the transverse component of the actuator force is considered.
+Initially, the nutcracker handles were assumed to be rigid. In this analysis, the handles are modeled as beams that deform under load.
+
+Only the transverse (vertical) components of the forces from the actuator and the nut are considered.
+
+---
+
+## a. Location of Maximum Elastic Deflection
+
+The handle is modeled as a cantilever beam.
 
 Assumptions:
 
-- Handle length: `L = 120 mm = 0.12 m`
+- Handle length: L = 120 mm  
 
-- Actuator force needed: about `300 N`
+- Force applied at end: P ≈ 300 N  
 
-- Handle modeled as a cantilever beam
+- Fixed at the pivot  
 
-- Maximum deflection occurs at the free end of the handle where the actuator force is applied
+- Load applied at the free end  
 
-For a cantilever beam with a point load at the end:
+For a cantilever beam with a point load at the end, the maximum deflection occurs at the free end.
 
-\[
-
-\delta_{max} = \frac{PL^3}{3EI}
-
-\]
-
-The maximum elastic deflection occurs at the end of the handle because that point is farthest from the fixed pivot region and experiences the largest bending displacement.
+Therefore, the location of maximum elastic deflection is at the end of the handle, where the actuator force is applied.
 
 ---
 
-### b. Beam Design for Less Than 2% Deflection
+## b. Beam Design for Less Than 2% Deflection
 
-The deflection limit is:
+### Deflection constraint
 
-\[
+delta_allowable = 0.02 L  
 
-\delta_{allowable} = 0.02L
-
-\]
-
-\[
-
-\delta_{allowable} = 0.02(120 mm) = 2.4 mm
-
-\]
-
-I selected **6061-T6 aluminum** for the handle because it is lightweight, stiff, and commonly used for mechanical components. 6061-T6 aluminum has an elastic modulus of approximately `68.9 GPa` and yield strength around `276 MPa`. 
-
-Using:
-
-\[
-
-I_{required} = \frac{PL^3}{3E\delta}
-
-\]
-
-\[
-
-I_{required} = \frac{(300)(0.12)^3}{3(68.9 \times 10^9)(0.0024)}
-
-\]
-
-\[
-
-I_{required} \approx 1.05 \times 10^{-9} m^4
-
-\]
-
-A feasible rectangular cross-section is:
-
-- Width: `15 mm`
-
-- Height: `10 mm`
-
-For a rectangular beam:
-
-\[
-
-I = \frac{bh^3}{12}
-
-\]
-
-\[
-
-I = \frac{(15)(10^3)}{12} = 1250 mm^4
-
-\]
-
-\[
-
-I = 1.25 \times 10^{-9} m^4
-
-\]
-
-Since:
-
-\[
-
-1.25 \times 10^{-9} > 1.05 \times 10^{-9}
-
-\]
-
-this cross-section satisfies the deflection requirement.
-
-The predicted deflection is:
-
-\[
-
-\delta_{max} = \frac{PL^3}{3EI}
-
-\]
-
-\[
-
-\delta_{max} \approx 2.01 mm
-
-\]
-
-Since:
-
-\[
-
-2.01 mm < 2.4 mm
-
-\]
-
-the design meets the requirement.
-
-The maximum bending stress is:
-
-\[
-
-\sigma_{max} = \frac{Mc}{I}
-
-\]
-
-\[
-
-\sigma_{max} = \frac{(300)(0.12)(0.005)}{1.25 \times 10^{-9}}
-
-\]
-
-\[
-
-\sigma_{max} \approx 144 MPa
-
-\]
-
-This is below the yield strength of 6061-T6 aluminum, so the handle should remain elastic.
+delta_allowable = 0.02 (120 mm) = 2.4 mm  
 
 ---
 
-### c. Final Beam Design
+### Material selection
 
-Final handle design:
+Material: 6061-T6 Aluminum  
 
-- Material: 6061-T6 aluminum
+- Elastic modulus: E ≈ 69 GPa  
 
-- Handle length: `120 mm`
+- Yield strength: ≈ 276 MPa  
 
-- Cross-section: rectangular beam
+This material is chosen because it is lightweight and provides good stiffness.
 
-- Width: `15 mm`
+---
 
-- Height: `10 mm`
+### Required stiffness
 
-- Maximum deflection: `2.01 mm`
+For a cantilever beam:
 
-- Allowable deflection: `2.4 mm`
+delta = (P * L^3) / (3 * E * I)
 
-- Result: design meets the stiffness requirement
+Rearranging:
 
-This design is mass-efficient because the handle uses a relatively small rectangular cross-section while still keeping the deflection below 2% of the handle length. A taller cross-section is useful because bending stiffness increases with height cubed, making it more efficient than simply making the handle wider.
+I_required ≈ 1.05 × 10^-9 m^4  
+
+---
+
+### Selected cross-section
+
+Rectangular beam:
+
+- Width b = 15 mm  
+
+- Height h = 10 mm  
+
+Moment of inertia:
+
+I = (b * h^3) / 12  
+
+I ≈ 1.25 × 10^-9 m^4  
+
+Since:
+
+1.25 × 10^-9 > 1.05 × 10^-9  
+
+✔ The design satisfies the stiffness requirement
+
+---
+
+### Deflection check
+
+delta_max ≈ 2.01 mm  
+
+Since:
+
+2.01 mm < 2.4 mm  
+
+✔ Deflection is within the allowable limit
+
+---
+
+### Stress check
+
+sigma_max ≈ 144 MPa  
+
+Since:
+
+144 MPa < 276 MPa  
+
+✔ The beam remains in the elastic region
+
+---
+
+## c. Final Beam Design
+
+- Material: 6061-T6 Aluminum  
+
+- Length: 120 mm  
+
+- Cross-section: 15 mm × 10 mm  
+
+- Maximum deflection: 2.01 mm  
+
+- Allowable deflection: 2.4 mm  
+
+This design is mass-efficient because increasing the height of the beam significantly improves stiffness (proportional to h³), allowing a small cross-section to meet the deflection requirement.
+
+---
